@@ -1,0 +1,28 @@
+{
+  "E1": [
+   {"availabilit":true,
+   "UnitNumber":"E1-2516",
+   "FloorPlanMarketRent":2215.0000,
+   "MadeReadyDate":"2/7/2015",
+   "unitId":134}
+ ],
+   "A1": [
+   {"availabilit":true,
+   "UnitNumber":"A1-2516",
+   "FloorPlanMarketRent":2215.0000,
+   "MadeReadyDate":"2/7/2015",
+   "unitId":134}
+ ],
+   "B1": [
+   {"availabilit":true,
+   "UnitNumber":"B1-2516",
+   "FloorPlanMarketRent":2215.0000,
+   "MadeReadyDate":"2/7/2015",
+   "unitId":134},
+   {"availabilit":true,
+   "UnitNumber":"B1-2500",
+   "FloorPlanMarketRent":2215.0000,
+   "MadeReadyDate":"2/7/2015",
+   "unitId":130}
+ ]
+}

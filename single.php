@@ -1,0 +1,119 @@
+<?php get_template_part('parts/header'); ?>
+
+ <div class="row">
+  <section id="page-header">
+  <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+
+          <?php $src = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'full', false, '' ); $srcEmpty = '/wp-content/themes/sweb-theme/img/sweb-logo-blog.jpg';  ?>
+    <div class="featured-image" style="background: #7a7b75;
+      	  background-size:cover;
+      background-repeat: no-repeat;
+      background-position: center;
+background-image: url(<?php if (!empty($src[0])) { echo $src[0]; } else {echo $srcEmpty;} ?>); /* fallback */
+background-image: -moz-linear-gradient(top, rgba(0,0,0,0) 30%, rgba(0,0,0,0.6) 100%), url(<?php if (!empty($src[0])) { echo $src[0]; } else {echo $srcEmpty;} ?>); /* FF3.6+ */
+background-image: -webkit-gradient(linear, left top, left bottom, color-stop(30%,rgba(0,0,0,0)), color-stop(100%,rgba(0,0,0,0.6))), url(<?php if (!empty($src[0])) { echo $src[0]; } else {echo $srcEmpty;} ?>); /* Chrome,Safari4+ */
+background-image: -webkit-linear-gradient(top, rgba(0,0,0,0) 30%,rgba(0,0,0,0.6) 100%), url(<?php if (!empty($src[0])) { echo $src[0]; } else {echo $srcEmpty;} ?>); /* Chrome10+,Safari5.1+ */
+background-image: -o-linear-gradient(top, rgba(0,0,0,0) 30%,rgba(0,0,0,0.6) 100%), url(<?php if (!empty($src[0])) { echo $src[0]; } else {echo $srcEmpty;} ?>); /* Opera 11.10+ */
+background-image: -ms-linear-gradient(top, rgba(0,0,0,0) 30%,rgba(0,0,0,0.6) 100%), url(<?php if (!empty($src[0])) { echo $src[0]; } else {echo $srcEmpty;} ?>); /* IE10+ */
+background-image: linear-gradient(to bottom, rgba(0,0,0,0) 30%,rgba(0,0,0,0.6) 100%), url(<?php if (!empty($src[0])) { echo $src[0]; } else {echo $srcEmpty;} ?>); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#007a7c76', endColorstr='#807a7c76',GradientType=0 ); /* IE6-9 */">
+      <div class="container">
+      <div class="table">
+        <div class="row">
+
+          
+          <div class="col-md-6"><span class="title"><?php the_title(); ?></span></div>
+          <div class="col-md-6"> </div>
+            
+        </div>
+      </div>
+      </div>
+    </div>
+  </section>
+  </div>
+
+
+
+
+<div class="container">
+  <div class="row">
+  
+  <div class="col-sm-10 col-sm-offset-1">
+  	<div class="btn-group  hidden-xs">
+	  <button class="btn btn-default btn-md dropdown-toggle locations" type="button" data-toggle="dropdown" aria-expanded="false">
+	    <?php _e( 'Categories'); ?> <span class="caret"></span>
+	  </button>
+	  <ul class="dropdown-menu categories" role="menu">
+				    
+				    <?php 
+					    $args = array(
+						'show_option_all'    => '',
+						'orderby'            => 'name',
+						'order'              => 'ASC',
+						'style'              => '',
+						'show_count'         => 0,
+						'hide_empty'         => 1,
+						'use_desc_for_title' => 1,
+						'child_of'           => 0,
+						'feed'               => '',
+						'feed_type'          => '',
+						'feed_image'         => '',
+						'exclude'            => '',
+						'exclude_tree'       => '',
+						'include'            => '',
+						'hierarchical'       => 1,
+						'title_li'           => __( '' ),
+						'show_option_none'   => __( '' ),
+						'number'             => null,
+						'echo'               => 1,
+						'depth'              => 0,
+						'current_category'   => 0,
+						'pad_counts'         => 0,
+						'taxonomy'           => 'category',
+						'walker'             => null
+					    );
+					    wp_list_categories( $args ); 
+					?>
+				    					    
+				  </ul>
+	</div>
+  </div>
+
+   <div class="col-sm-10 col-sm-offset-1">
+      <div id="content" role="main">
+        <article role="article" id="post_<?php the_ID()?>" <?php post_class()?>>
+          <header class="page-head">
+            <h2><span class="blog-title"><?php // the_title()?></span></h2>
+          </header>
+          <div class="blog-single">
+          <?php the_post_thumbnail('', array( 'class' => 'img-responsive attachment-post-thumbnail'  )); ?>
+          <?php the_content()?>
+          <hr/>
+          <h4>
+              <em>
+               <!-- <span class="text-muted" class="author">By <?php the_author() ?>,</span> -->
+                <time  class="text-muted" datetime="<?php the_time('d-m-Y')?>"><?php the_time('jS F Y') ?></time>
+              </em>
+            </h4>
+            <p class="text-muted" style="margin-bottom: 30px;">
+              <span class="category-blog"><i class="glyphicon glyphicon-folder-open"></i>&nbsp; Category: <?php _e(''); ?> <?php the_category(', ') ?><br/> 
+<!--  <i class="glyphicon glyphicon-comment"></i>&nbsp; Comments: <?php comments_popup_link('None', '1', '%'); ?>-->
+            </span>
+            </p>
+          </div>
+        </article>
+        <br>
+        <?php comments_template('/parts/comments.php'); ?>
+        <?php endwhile; ?>
+        <?php else: ?>
+        <?php wp_redirect(get_bloginfo('siteurl').'/404', 404); exit; ?>  
+        <?php endif;?>
+      </div><!-- /#content -->
+    </div>
+    
+   
+    
+  </div><!-- /.row -->
+</div><!-- /.container -->
+
+<?php get_template_part('parts/footer'); ?>

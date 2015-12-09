@@ -1,0 +1,130 @@
+ /*
+Navbar "hovernav" dropdown menu - this works only for screen sizes larger than phones.
+The Bootstrap CSS is unchanged. If you don't want this, delete this segment of the CSS
+and delete the corresponding segment of bst.js
+*/
+
+
+/* Fonts */
+
+/* Testing broken grid */
+
+/* 
+* {border:1px solid green;}
+* * {border:1px solid skyblue;}
+* * * {border:1px solid red;}
+* * * * {border:1px solid green;}
+* * * * * {border:1px solid skyblue;}
+* * * * * * {border:1px solid red;}
+* * * * * * * {border:1px solid green;}
+* * * * * * * * {border:1px solid skyblue;}
+* * * * * * * * * {border:1px solid red;}
+* * * * * * * * * * {border:1px solid green;}
+* * * * * * * * * * * {border:1px solid skyblue;}
+* * * * * * * * * * * * {border:1px solid red;}
+*/
+
+/* General styles */
+
+
+.tiny-gutter .col-sm-1, .tiny-gutter .col-sm-2, .tiny-gutter .col-sm-3, .tiny-gutter .col-sm-4,
+.tiny-gutter .col-sm-5, .tiny-gutter .col-sm-6, .tiny-gutter .col-sm-7, .tiny-gutter .col-sm-8,
+.tiny-gutter .col-sm-9, .tiny-gutter .col-sm-10, .tiny-gutter .col-sm-11, .tiny-gutter .col-sm-12,
+.tiny-gutter .col-md-1, .tiny-gutter .col-md-2, .tiny-gutter .col-md-3, .tiny-gutter .col-md-4,
+.tiny-gutter .col-md-5, .tiny-gutter .col-md-6, .tiny-gutter .col-md-7, .tiny-gutter .col-md-8,
+.tiny-gutter .col-md-9, .tiny-gutter .col-md-10, .tiny-gutter .col-md-11, .tiny-gutter .col-md-12,
+.tiny-gutter .col-lg-1, .tiny-gutter .col-lg-2, .tiny-gutter .col-lg-3, .tiny-gutter .col-lg-4,
+.tiny-gutter .col-lg-5, .tiny-gutter .col-lg-6, .tiny-gutter .col-lg-7, .tiny-gutter .col-lg-8,
+.tiny-gutter .col-lg-9, .tiny-gutter .col-lg-10, .tiny-gutter .col-lg-11, .tiny-gutter .col-lg-12,
+.tiny-gutter .col-xs-1, .tiny-gutter .col-xs-2, .tiny-gutter .col-xs-3, .tiny-gutter .col-xs-4,
+.tiny-gutter .col-xs-5, .tiny-gutter .col-xs-6, .tiny-gutter .col-xs-7, .tiny-gutter .col-xs-8,
+.tiny-gutter .col-xs-9, .tiny-gutter .col-xs-10, .tiny-gutter .col-xs-11, .tiny-gutter .col-xs-12
+ {padding-left: 2px; padding-right: 2px;}
+
+/* =WordPress Core
+-------------------------------------------------------------- */
+.alignnone {margin: 5px 20px 20px 0;}
+.aligncenter, div.aligncenter {display: block; margin: 5px auto 5px auto;}
+.alignright {float:right; margin: 5px 0 15px 15px;}
+.alignleft {float: left; margin: 5px 15px 15px 0;}
+a img.alignright {float: right; margin: 5px 0 20px 20px;}
+a img.alignnone {margin: 5px 20px 20px 0;}
+a img.alignleft {float: left; margin: 5px 20px 20px 0;}
+a img.aligncenter {display: block; margin-left: auto; margin-right: auto}
+.wp-caption {background: #fff; border: 1px solid #f0f0f0; max-width: 96%; /* Image does not overflow the content area */ padding: 5px 3px 10px; text-align: center;}
+.wp-caption.alignnone {margin: 5px 20px 20px 0;}
+.wp-caption.alignleft {margin: 5px 20px 20px 0;}
+.wp-caption.alignright {margin: 5px 0 20px 20px;}
+.wp-caption img {border: 0 none; height: auto; margin: 0; max-width: 98.5%; padding: 0; width: auto;}
+.wp-caption p.wp-caption-text {font-size: 11px; line-height: 17px; margin: 0; padding: 0 4px 5px;}
+.fl {float: left;}
+.fr {float: right;}
+.clear {clear: both;}
+
+
+/* header */
+
+
+/* Main Navigation */
+
+
+/* Menu style */
+
+/* Home Page */
+
+
+/* video */
+
+
+
+/* Blog Page styles */
+
+
+/* Footer */
+
+
+#sweblogo {float: right; margin: 20px 0 10px 10px; padding: 0; width: 49px; overflow: hidden;}
+#sweblogo a:hover {display: block; text-indent: -49px}
+#sweblogo a {display: block; height: 22px; overflow: hidden; width: 49px; padding: 0 !important;}
+#sweblogo img.sweblogo {max-width: 98px !important;}
+#sweblogo img {vertical-align: bottom;}
+
+
+/*==========  Non-Mobile First Method  ==========*/
+
+/* Large Devices, Wide Screens */
+@media (max-width : 1200px) {
+
+	}
+
+
+/* Medium Devices, Desktops (ipad size) */
+@media (max-width : 1024px) {
+/*#container-video {overflow: visible;}*/
+
+
+}
+
+@media (min-width:768px) and (max-width:1024px){
+
+}
+
+
+}
+
+/* Small Devices, Tablets */
+@media (max-width : 768px) {
+
+
+}
+
+/* Extra Small Devices, Phones */ 
+@media (max-width : 480px) {
+
+
+}
+
+/* Custom, iPhone Retina */ 
+@media (max-width : 320px) {
+	/*#container-video {overflow: hidden; min-height: 160px;} */ 
+}
