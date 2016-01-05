@@ -12,6 +12,9 @@ function sweb_enqueues()
     wp_register_style('bootstrap-css', get_template_directory_uri() . '/css/bootstrap.min.css', false, null);
     wp_enqueue_style('bootstrap-css');
     
+    wp_register_style('style-css', get_template_directory_uri() . '/style.css', false, null);
+    wp_enqueue_style('style-css');
+    
     wp_register_script('modernizr', get_template_directory_uri() . '/js/modernizr.custom.js', false, null, false);
     wp_enqueue_script('modernizr');
     
