@@ -79,7 +79,6 @@
 
 		<nav>
 		<?php
-                   <?php
                 wp_nav_menu( array(
                         'theme_location'    => 'main',
                         'depth' => 0,
@@ -88,7 +87,7 @@
                   'walker' => new BootstrapNavMenuWalker()
                        )
                 );
-                ?>                ?>
+                ?>
 		</nav>
 	</div>
 	</div>
